@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addict Bite Cookie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="relative min-h-screen bg-cover bg-center" style="background-image: url('example.jpg');">
+        <!-- Navbar -->
+        <nav class="flex items-center justify-between px-6 py-4 bg-white bg-opacity-90 shadow-md">
+            <div class="text-3xl cursor-pointer">
+                <div class="space-y-1">
+                    <div class="w-8 h-1 bg-[#511414]"></div>
+                    <div class="w-8 h-1 bg-[#511414]"></div>
+                    <div class="w-8 h-1 bg-[#511414]"></div>
+                </div>
+            </div>
+            <ul class="flex space-x-10 text-lg font-semibold text-black">
+                <li><a href="#" class="hover:text-gray-600">Our product</a></li>
+                <li><a href="#" class="hover:text-gray-600">Order</a></li>
+                <li><a href="#" class="hover:text-gray-600">Location</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Heading -->
+        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
+            <h1 class="text-white text-6xl md:text-7xl font-bold leading-tight"
+                style="text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
+                Addict<br />Bite<br />Cookie
+            </h1>
+        </div>
+
+
+    </div>
+    <!-- About Section -->
+    <section class="bg-white py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- Left Logo Text -->
+            <div class="text-5xl font-bold leading-snug text-black">
+                <p>Addict<br />Bite<br />Cookie</p>
+            </div>
+
+            <!-- Right Description -->
+            <div class="text-gray-600 text-lg leading-relaxed">
+                <p>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                    1500s, when an unknown printer took a galley of type and scrambled it to
+                    make a type specimen book. It has survived not only five centuries, but
+                    also the leap into electronic typesetting, remaining essentially unchanged.
+                    It was popularised in the 1960s with the release of Letraset sheets containing
+                    Lorem Ipsum passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide flex flex-col items-center"><img src="images/1.png" alt="Oatmeal Raisin Cookies">
+                <p class="text-center mt-2">Oatmeal Raisin Cookies</p>
+            </div>
+            <div class="swiper-slide flex flex-col items-center"><img src="images/2.png" alt="Oatmeal Raisin Cookies">
+                <p class="text-center mt-2">Oatmeal Raisin Cookies</p>
+            </div>
+            <div class="swiper-slide flex flex-col items-center"><img src="images/3.png" alt="Oatmeal Raisin Cookies">
+                <p class="text-center mt-2">Oatmeal Raisin Cookies</p>
+            </div>
+            <div class="swiper-slide flex flex-col items-center"><img src="images/4.png" alt="Oatmeal Raisin Cookies">
+                <p class="text-center mt-2">Oatmeal Raisin Cookies</p>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+</body>
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+    const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+    });
+
+</script>
+
+</html>
