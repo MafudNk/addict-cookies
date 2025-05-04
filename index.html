@@ -15,6 +15,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
 </head>
 
 
@@ -35,52 +38,81 @@
         font-family: 'Inter', sans-serif;
     }
 
-    @keyframes blob {
-    0%, 100% {
-      transform: scale(1) translate(0, 0);
+    .font-source {
+        font-family: 'Source Serif 4', serif;
     }
-    50% {
-      transform: scale(1.05) translate(10px, -10px);
-    }
-  }
 
-  .animate-blob {
-    animation: blob 15s infinite ease-in-out;
-  }
+    @keyframes blob {
+
+        0%,
+        100% {
+            transform: scale(1) translate(0, 0);
+        }
+
+        50% {
+            transform: scale(1.05) translate(10px, -10px);
+        }
+    }
+
+    .animate-blob {
+        animation: blob 15s infinite ease-in-out;
+    }
 </style>
+
+
+<script>
+    const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+    const base = document.createElement("base");
+    base.href = isLocal ? "/cookies/" : "/nama-folder-deploy/";
+    console.log(base.href);
+    document.head.appendChild(base);
+  </script>
 
 <body>
     <div id="navbar"></div>
-    <div class="relative min-h-screen bg-cover bg-center opacity-70" style="background-image: url('images/bg.JPG');">
+    <div class="relative min-h-screen bg-cover bg-center opacity-70">
+        <div class="swiperNav mySwiperNav">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/1.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/2.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/3.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/4.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/5.JPG">
+                </div>
+                <!-- <div class="swiper-slide flex flex-col items-center"><img src="images/nav/6.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/7.JPG">
+                </div>
+                <div class="swiper-slide flex flex-col items-center"><img src="images/nav/8.JPG">
+                </div> -->
+            </div>
+        </div>
         <!-- Navbar -->
         <!-- Mobile Menu (Initially Hidden) -->
         <div class="md:hidden hidden bg-white bg-opacity-90 shadow-md" id="mobile-menu">
-            <ul class="flex flex-col items-center space-y-4 py-4 text-lg font-semibold text-black">
-                <li><a href="#" class="hover:text-gray-600">Our product</a></li>
-                <li><a href="#" class="hover:text-gray-600">Order</a></li>
-                <li><a href="#" class="hover:text-gray-600">Location</a></li>
+            <ul class="flex space-x-10 text-lg font-semibold text-black">
+                <li><a href="product.html" class="hover:text-gray-600">Produk</a></li>
+                <li><a href="#" class="hover:text-gray-600">Pesan</a></li>
+                <li><a href="#" class="hover:text-gray-600">Lokasi</a></li>
             </ul>
         </div>
-
-        <!-- Main Heading -->
-        <div class="absolute inset-0 flex items-center justify-center text-center px-4">
-            <!-- <h1 class="text-white text-6xl md:text-7xl font-bold leading-tight"
-                style="text-shadow: 2px 2px 8px rgba(0,0,0,0.3);">
-                Addict<br />Bite<br />Cookie
-            </h1> -->
-            <img src="images/mdpx-10_new.png" alt="">
-        </div>
-
 
     </div>
     <!-- About Section -->
     <section class="relative overflow-hidden bg-orange-50 py-20">
-        <div class="absolute -top-20 -left-20 w-[500px] h-[500px] -z-10 animate-blob mix-blend-multiply opacity-50 blur-sm">
+        <div
+            class="absolute -top-20 -left-20 w-[500px] h-[500px] -z-10 animate-blob mix-blend-multiply opacity-50 blur-sm">
             <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-full">
-              <path fill="#F59E0B" d="M41.6,-65.5C53.9,-56.1,63.7,-44.1,66.9,-30.9C70.2,-17.7,66.9,-3.4,63.5,11.8C60.1,27.1,56.5,43.2,46.4,53.3C36.2,63.4,19.6,67.5,2.9,64.1C-13.8,60.7,-27.5,49.8,-36.2,38C-44.8,26.2,-48.3,13.6,-52.6,-1.1C-56.9,-15.8,-62,-31.6,-56.6,-43.6C-51.1,-55.5,-35.1,-63.6,-19.1,-69C-3,-74.5,13.1,-77.2,27.1,-72.5C41.2,-67.8,54.4,-55,41.6,-65.5Z" transform="translate(100 100)" />
+                <path fill="#F59E0B"
+                    d="M41.6,-65.5C53.9,-56.1,63.7,-44.1,66.9,-30.9C70.2,-17.7,66.9,-3.4,63.5,11.8C60.1,27.1,56.5,43.2,46.4,53.3C36.2,63.4,19.6,67.5,2.9,64.1C-13.8,60.7,-27.5,49.8,-36.2,38C-44.8,26.2,-48.3,13.6,-52.6,-1.1C-56.9,-15.8,-62,-31.6,-56.6,-43.6C-51.1,-55.5,-35.1,-63.6,-19.1,-69C-3,-74.5,13.1,-77.2,27.1,-72.5C41.2,-67.8,54.4,-55,41.6,-65.5Z"
+                    transform="translate(100 100)" />
             </svg>
-          </div>
-          
+        </div>
+
         <div class="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-5 items-center">
             <!-- Left Logo Text -->
             <img src="images/Addictt.png" alt="">
@@ -98,6 +130,12 @@
                     cookie punya tekstur soft & chewy yang meleleh di mulut, dengan
                     rasa manis pas yang bikin kamu pengen lagi dan lagi.
                 </p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 gap-5 items-center">
+
+            <div class="text-gray-600 font-source text-2xl leading-relaxed text-center mt-8">
+                <strong>-Where Every Bite Becomes an Addiction-</strong>
             </div>
         </div>
     </section>
@@ -118,35 +156,7 @@
         </div>
         <div class="swiper-pagination"></div>
     </div>
-    <section class="bg-orange-50 py-10 px-4 md:px-20">
-        <!-- Item 1 -->
-        <div class="flex flex-col md:flex-row items-start gap-10 mb-10">
-            <img src="images/example2.jpg" alt="Red Velvet Cookies" class="w-full md:w-1/3 rounded shadow-md" />
-            <div class="md:w-2/3">
-                <h2 class="text-xl md:text-2xl font-bold mb-2">Red Velvet</h2>
-                <p class="text-gray-700">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it.
-                </p>
-            </div>
-        </div>
 
-        <!-- Item 2 -->
-        <div class="flex flex-col md:flex-row items-start gap-10">
-            <img src="images/example2.jpg" alt="Red Velvet Cookies" class="w-full md:w-1/3 rounded shadow-md" />
-            <div class="md:w-2/3">
-                <h2 class="text-xl md:text-2xl font-bold mb-2">Red Velvet</h2>
-                <p class="text-gray-700">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's
-                    standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                    scrambled it.
-                </p>
-            </div>
-        </div>
-    </section>
 </body>
 <footer class="bg-amber-900 text-white py-6 mt-10">
     <div class="max-w-7xl mx-auto px-4 text-center">
@@ -175,7 +185,14 @@
             disableOnInteraction: false,
         },
     });
-
+    const swiperNav = new Swiper(".mySwiperNav", {
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    });
 </script>
 
 </html>
