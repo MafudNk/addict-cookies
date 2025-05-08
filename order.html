@@ -76,14 +76,14 @@
                 </div>
                 <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1" placeholder="0" />
             </div>
-            <div class="flex items-center gap-4">
+            <!-- <div class="flex items-center gap-4">
                 <img src="images/product/03.webp" alt="Matcha White Choco" class="w-16 h-16 object-cover rounded" />
                 <div class="flex-1">
                     <p class="font-medium">Monster Cookie</p>
                     <p class="text-sm text-gray-500">Rp 11.000</p>
                 </div>
                 <input type="number" name="monsterCookie" min="0" class="w-16 border rounded p-1" placeholder="0" />
-            </div>
+            </div> -->
             <!-- Info Pembeli -->
             <hr class="my-4">
             <div>
@@ -189,7 +189,7 @@
         pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga: Rp ${totalHarga.toLocaleString("id-ID")}\n\n`;
         pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n📞 No. HP: ${nohp}\n💳 Pembayaran: ${pembayaran}\n\nTerima kasih!`;
 
-        const nomor = "6281216020089"; // Ganti nomor WA
+        const nomor = "6281617997119"; // Ganti nomor WA
         const encoded = encodeURIComponent(pesan);
         window.open(`https://wa.me/${nomor}?text=${encoded}`, '_blank');
     });
