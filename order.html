@@ -136,7 +136,7 @@
         const redVelvet = parseInt(this.redVelvet.value) || 0;
         const blackCaramel = parseInt(this.blackCaramel.value) || 0;
         const matchaWhiteChoco = parseInt(this.matchaWhiteChoco.value) || 0;
-        const monsterCookie = parseInt(this.monsterCookie.value) || 0;
+        //const monsterCookie = parseInt(this.monsterCookie.value) || 0;
 
         const nama = this.nama.value.trim();
         const alamat = this.alamat.value.trim();
@@ -180,11 +180,11 @@
             total += matchaWhiteChoco;
             totalHarga += matchaWhiteChoco * hargaMatcha;
         }
-        if (monsterCookie > 0) {
+        /*if (monsterCookie > 0) {
             pesan += `- Monster Cookie: ${monsterCookie} pcs (Rp ${monsterCookie * hargaMonster})\n`;
             total += monsterCookie;
             totalHarga += monsterCookie * hargaMonster;
-        }
+        }*/
 
         pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga: Rp ${totalHarga.toLocaleString("id-ID")}\n\n`;
         pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n📞 No. HP: ${nohp}\n💳 Pembayaran: ${pembayaran}\n\nTerima kasih!`;
