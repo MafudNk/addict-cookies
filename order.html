@@ -183,7 +183,7 @@
         let totalHarga = 0;
 
         if (classic > 0) {
-            pesan += `- Classic: ${classic} pcs (Rp ${(classic * hargaClassic)})\n`;
+            pesan += `- Classic: ${classic} pcs (Rp ${(classic * hargaClassic).toLocaleString("id-ID")})\n`;
             total += classic;
             totalHarga += classic * hargaClassic;
         }
