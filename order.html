@@ -108,12 +108,20 @@
                 <textarea name="alamat" required class="w-full border rounded p-2 qty-input" rows="2"></textarea>
             </div>
             <div>
-                <label class="block mb-1">No. HP</label>
-                <input type="text" name="nohp" required class="w-full border rounded p-2 qty-input" />
+                <label class="block mb-1">Pesan</label>
+                <input type="text" name="pesan" class="w-full border rounded p-2 qty-input" />
+            </div>
+            <div>
+                <label class="block mb-1">Jasa Pengiriman</label>
+                <select name="pembayaran" class="w-full border rounded p-2 qty-input">
+                    <option value="Gosend">Gosend</option>
+                    <option value="Kurir Lokal">Kurir Lokal</option>
+                    <option value="-">-</option>
+                </select>
             </div>
             <div>
                 <label class="block mb-1">Metode Pembayaran</label>
-                <select name="pembayaran" class="w-full border rounded p-2 qty-input">
+                <select name="jasa" class="w-full border rounded p-2 qty-input">
                     <option value="Transfer">Transfer</option>
                     <option value="Cash">Cash</option>
                 </select>
@@ -165,8 +173,10 @@
 
         const nama = this.nama.value.trim();
         const alamat = this.alamat.value.trim();
-        const nohp = this.nohp.value.trim();
+        const nohp = this.nohp.value;
         const pembayaran = this.pembayaran.value;
+        const message = this.pesan.value;
+        const jasa = this.jasa.value;
 
         // Harga per pcs
         const hargaClassic = 23000;
@@ -226,7 +236,9 @@
         }*/
 
         pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga: Rp ${totalHarga.toLocaleString("id-ID")}\n\n`;
-        pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n📞 No. HP: ${nohp}\n💳 Pembayaran: ${pembayaran}\n\n Terima kasih atas pesanan  dan kepercayaannya ya.
+        pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n Pesan: ${nohp}\n💳 Pembayaran: ${pembayaran}\n\n 
+        🚚 Jasa Pengiriman: ${jasa}\n\n🗒️ Pesan : ${message} \n\n
+        Terima kasih atas pesanan  dan kepercayaannya ya.
 Untuk melanjutkan proses pemesanan/pembelian, kakak bisa langsung melakukan transfer ke rekening berikut:\n\n
 Nama Pemilik Rekening  : Nur Aishya\n\n
 Bank                                 : BCA\n\n
