@@ -73,9 +73,9 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <img src="images/product/5.webp" alt="Matcha Choco" class="w-16 h-16 object-cover rounded" />
+                <img src="images/product/5.webp" alt="Matcha" class="w-16 h-16 object-cover rounded" />
                 <div class="flex-1">
-                    <p class="font-medium">Matcha Choco</p>
+                    <p class="font-medium">Matcha</p>
                     <p class="text-sm text-gray-500">Rp 23.500</p>
                 </div>
                 <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
@@ -90,7 +90,7 @@
             </div>
 
             <!-- <div class="flex items-center gap-4">
-                <img src="images/product/03.webp" alt="Matcha Choco" class="w-16 h-16 object-cover rounded" />
+                <img src="images/product/03.webp" alt="Matcha" class="w-16 h-16 object-cover rounded" />
                 <div class="flex-1">
                     <p class="font-medium">Monster Cookie</p>
                     <p class="text-sm text-gray-500">Rp 11.000</p>
@@ -215,7 +215,7 @@
             totalHarga += blackCaramel * hargaCaramel;
         }
         if (matchaWhiteChoco > 0) {
-            pesan += `- Matcha Choco: ${matchaWhiteChoco} pcs (Rp ${(matchaWhiteChoco * hargaMatcha).toLocaleString("id-ID")})\n`;
+            pesan += `- Matcha: ${matchaWhiteChoco} pcs (Rp ${(matchaWhiteChoco * hargaMatcha).toLocaleString("id-ID")})\n`;
             total += matchaWhiteChoco;
             totalHarga += matchaWhiteChoco * hargaMatcha;
         }
