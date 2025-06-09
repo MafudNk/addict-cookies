@@ -35,15 +35,24 @@
                     <p class="font-medium">Classic</p>
                     <p class="text-sm text-gray-500">Rp 23.000</p>
                 </div>
-                <input type="number" name="classic" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <!-- <input type="number" name="classic" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
+                <div class="flex items-center gap-1">
+                    <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                        onclick="updateQty('classic', -1)">−</button>
+                    <input type="text" name="classic" id="classic" value="0" readonly
+                        class="w-10 text-center border rounded" />
+                    <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                        onclick="updateQty('classic', 1)">+</button>
+                </div>
             </div>
             <div class="flex items-center gap-4">
-                <img src="images/product/2.webp" alt="Original"  class="w-16 h-16 object-cover rounded" />
+                <img src="images/product/2.webp" alt="Original" class="w-16 h-16 object-cover rounded" />
                 <div class="flex-1">
                     <p class="font-medium">OG with Marshmallow</p>
                     <p class="text-sm text-gray-500">Rp 21.500</p>
                 </div>
-                <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" />
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/7.webp" alt="Biscoff" class="w-16 h-16 object-cover rounded" />
@@ -61,7 +70,8 @@
                     <p class="font-medium">Double Choco</p>
                     <p class="text-sm text-gray-500">Rp 22.500</p>
                 </div>
-                <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" />
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/4.webp" alt="Black Caramel" class="w-16 h-16 object-cover rounded" />
@@ -69,7 +79,8 @@
                     <p class="font-medium">Black Caramel</p>
                     <p class="text-sm text-gray-500">Rp 25.000</p>
                 </div>
-                <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" />
             </div>
 
             <div class="flex items-center gap-4">
@@ -78,7 +89,8 @@
                     <p class="font-medium">Matcha</p>
                     <p class="text-sm text-gray-500">Rp 23.500</p>
                 </div>
-                <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" />
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/6.webp" alt="Red Velvet" class="w-16 h-16 object-cover rounded" />
@@ -86,7 +98,8 @@
                     <p class="font-medium">Red Velvet</p>
                     <p class="text-sm text-gray-500">Rp 18.500</p>
                 </div>
-                <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" />
             </div>
 
             <!-- <div class="flex items-center gap-4">
@@ -148,17 +161,17 @@
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
         });
- document.querySelectorAll('.qty-input').forEach((input, index, inputs) => {
-    input.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter') {
-        e.preventDefault(); // Biar form nggak submit
-        const next = inputs[index + 1];
-        if (next) {
-          next.focus();
-        }
-      }
+    document.querySelectorAll('.qty-input').forEach((input, index, inputs) => {
+        input.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') {
+                e.preventDefault(); // Biar form nggak submit
+                const next = inputs[index + 1];
+                if (next) {
+                    next.focus();
+                }
+            }
+        });
     });
-  });
     document.getElementById('orderForm').addEventListener('submit', function (e) {
         e.preventDefault();
 
