@@ -385,8 +385,8 @@
             totalHarga += monsterCookie * hargaMonster;
         }*/
 
-        pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga Cookies: Rp ${totalHarga.toLocaleString("id-ID")}\n*      (Total harga belum termasuk ongkir)*\n`;
-        if(jasa == 'Ekspedisi' ){
+        pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga Cookies: Rp ${totalHarga.toLocaleString("id-ID")}\n      *(Total harga belum termasuk ongkir)*\n`;
+        if(jasa == 'Ekspedisi (JNT)' ){
             pesan += `\n       Biaya Packing Luar Kota: Rp  3.000\n`;
         }
         pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n💳 Pembayaran: ${pembayaran}\n🚚 Jasa Pengiriman: ${jasa}\n🗒️ Pesan : ${message}
