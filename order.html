@@ -36,13 +36,16 @@
                     <p class="text-sm text-gray-500">Rp 23.000</p>
                 </div>
                 <!-- <input type="number" name="classic" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
-                <div class="flex items-center gap-1">
-                    <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                        onclick="updateQty('classic', -1)">−</button>
-                    <input type="text" name="classic" id="classic" value="0" readonly
-                        class="w-10 text-center border rounded" />
-                    <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                        onclick="updateQty('classic', 1)">+</button>
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('classic', -1)">−</button>
+                        <input type="text" name="classic" id="classic" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('classic', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalClassic" value="0"></p>
                 </div>
             </div>
             <div class="flex items-center gap-4">
@@ -51,8 +54,19 @@
                     <p class="font-medium">OG with Marshmallow</p>
                     <p class="text-sm text-gray-500">Rp 21.500</p>
                 </div>
-                <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" />
+                <!-- <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('original', -1)">−</button>
+                        <input type="text" name="original" id="original" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('original', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalOriginal" value="0"></p>
+                </div>
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/7.webp" alt="Biscoff" class="w-16 h-16 object-cover rounded" />
@@ -60,7 +74,18 @@
                     <p class="font-medium">Biscoff</p>
                     <p class="text-sm text-gray-500">Rp 20.500</p>
                 </div>
-                <input type="number" name="biscoff" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" />
+                <!-- <input type="number" name="biscoff" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('biscoff', -1)">−</button>
+                        <input type="text" name="biscoff" id="biscoff" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('biscoff', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalBiscoff" value="0"></p>
+                </div>
             </div>
 
             <!-- Varian 2 -->
@@ -70,8 +95,19 @@
                     <p class="font-medium">Double Choco</p>
                     <p class="text-sm text-gray-500">Rp 22.500</p>
                 </div>
-                <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" />
+                <!-- <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('doubleChoco', -1)">−</button>
+                        <input type="text" name="doubleChoco" id="doubleChoco" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('doubleChoco', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalDoubleChoco" value="0"></p>
+                </div>
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/4.webp" alt="Black Caramel" class="w-16 h-16 object-cover rounded" />
@@ -79,8 +115,19 @@
                     <p class="font-medium">Black Caramel</p>
                     <p class="text-sm text-gray-500">Rp 25.000</p>
                 </div>
-                <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" />
+                <!-- <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('blackCaramel', -1)">−</button>
+                        <input type="text" name="blackCaramel" id="blackCaramel" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('blackCaramel', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalBlackCaramel" value="0"></p>
+                </div>
             </div>
 
             <div class="flex items-center gap-4">
@@ -89,8 +136,19 @@
                     <p class="font-medium">Matcha</p>
                     <p class="text-sm text-gray-500">Rp 23.500</p>
                 </div>
-                <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" />
+                <!-- <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('matchaWhiteChoco', -1)">−</button>
+                        <input type="text" name="matchaWhiteChoco" id="matchaWhiteChoco" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('matchaWhiteChoco', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalMatchaWhiteChoco" value="0"></p>
+                </div>
             </div>
             <div class="flex items-center gap-4">
                 <img src="images/product/6.webp" alt="Red Velvet" class="w-16 h-16 object-cover rounded" />
@@ -98,8 +156,19 @@
                     <p class="font-medium">Red Velvet</p>
                     <p class="text-sm text-gray-500">Rp 18.500</p>
                 </div>
-                <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" />
+                <!-- <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                <div class="flex-2">
+                    <div class="flex items-center gap-1">
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('redVelvet', -1)">−</button>
+                        <input type="text" name="redVelvet" id="redVelvet" value="0" readonly
+                            class="w-10 text-center border rounded" />
+                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                            onclick="updateQty('redVelvet', 1)">+</button>
+                    </div>
+                    <p class="text-sm text-gray-500" id="totalRedVelvet" value="0"></p>
+                </div>
             </div>
 
             <!-- <div class="flex items-center gap-4">
@@ -155,7 +224,34 @@
 
 </html>
 <script>
-
+    function updateQty(id, delta) {
+        const input = document.getElementById(id);
+        let value = parseInt(input.value) || 0;
+        value += delta;
+        if (value < 0) value = 0;
+        input.value = value;
+        const hargaPerPcs = {
+            classic: 23000,
+            original: 21500,
+            biscoff: 20500,
+            doubleChoco: 22500,
+            redVelvet: 18500,
+            blackCaramel: 25000,
+            matchaWhiteChoco: 23500,
+            // monsterCookie: 11000
+        };
+        const totalHarga = value * hargaPerPcs[id];
+        const totalElement = document.getElementById(`total${id.charAt(0).toUpperCase() + id.slice(1)}`);
+        if (totalElement) {
+            totalElement.textContent = `Total: Rp ${totalHarga.toLocaleString("id-ID")}`;
+        }
+        if (!totalElement) {
+            const newTotalElement = document.createElement('p');
+            newTotalElement.id = `total${id.charAt(0).toUpperCase() + id.slice(1)}`;
+            newTotalElement.textContent = `Total: Rp ${totalHarga.toLocaleString("id-ID")}`;
+            input.parentNode.appendChild(newTotalElement);
+        }
+    }
     fetch('navbar.html')
         .then(res => res.text())
         .then(data => {
