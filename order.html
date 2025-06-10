@@ -214,7 +214,8 @@
                     <label class="block mb-1">Jasa Pengiriman</label>
                     <select name="jasa" class="w-full border rounded p-2 qty-input">
                         <option value="Gosend">Gosend</option>
-                        <option value="Kurir Lokal">Kurir Lokal</option>
+                        <option value="Ekspedisi"> Ekspedisi</option>
+                        <option value="Kurir lokal (Khusus area SBY & SDA*)">Kurir lokal (Khusus area SBY & SDA*)</option>
                         <option value="-">-</option>
                     </select>
                 </div>
@@ -384,15 +385,11 @@
             totalHarga += monsterCookie * hargaMonster;
         }*/
 
-        pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga: Rp ${totalHarga.toLocaleString("id-ID")}\n\n`;
-        pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n💳 Pembayaran: ${pembayaran}\n🚚 Jasa Pengiriman: ${jasa}\n🗒️ Pesan : ${message} \n\nTerima kasih atas pesanan  dan kepercayaannya ya.
-Untuk melanjutkan proses pemesanan/pembelian, kakak bisa langsung melakukan transfer ke rekening berikut:\n\n
-Nama Pemilik Rekening  : Nur Aishya\n
-Bank                                 : BCA\n
-Nomor Rekening             : 0112407446\n
-
-Setelah transfer, mohon kirimkan bukti pembayaran agar bisa segera kami proses ya, Kak 🙏\n\n
-Terima kasih banyak! 🌸
+        pesan += `\n📦 Total: ${total} pcs\n💰 Total Harga Cookies: Rp ${totalHarga.toLocaleString("id-ID")}\n*      (Total harga belum termasuk ongkir)*\n`;
+        if(jasa == 'Ekspedisi' ){
+            pesan += `\n       Biaya Packing Luar Kota: Rp  3.000\n`;
+        }
+        pesan += `📛 Nama: ${nama}\n🏠 Alamat: ${alamat}\n💳 Pembayaran: ${pembayaran}\n🚚 Jasa Pengiriman: ${jasa}\n🗒️ Pesan : ${message}
 `;
 
         const nomor = "6281617997119"; // Ganti nomor WA
