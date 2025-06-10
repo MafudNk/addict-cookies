@@ -27,151 +27,164 @@
         <h1 class="text-2xl font-bold mb-6 text-center">🛒 Pesan Cookies</h1>
 
         <form id="orderForm" class="space-y-4">
+            <div id="step1">
+                <!-- Varian 1 -->
+                <div class="flex items-center gap-4">
+                    <img src="images/product/1.webp" alt="Classic" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Classic</p>
+                        <p class="text-sm text-gray-500">Rp 23.000</p>
+                    </div>
+                    <!-- <input type="number" name="classic" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('classic', -1)">−</button>
+                            <input type="text" name="classic" id="classic" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('classic', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalClassic" value="0"></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="images/product/2.webp" alt="Original" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">OG with Marshmallow</p>
+                        <p class="text-sm text-gray-500">Rp 21.500</p>
+                    </div>
+                    <!-- <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('original', -1)">−</button>
+                            <input type="text" name="original" id="original" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('original', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalOriginal" value="0"></p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <img src="images/product/7.webp" alt="Biscoff" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Biscoff</p>
+                        <p class="text-sm text-gray-500">Rp 20.500</p>
+                    </div>
+                    <!-- <input type="number" name="biscoff" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('biscoff', -1)">−</button>
+                            <input type="text" name="biscoff" id="biscoff" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('biscoff', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalBiscoff" value="0"></p>
+                    </div>
+                </div>
 
-            <!-- Varian 1 -->
-            <div class="flex items-center gap-4">
-                <img src="images/product/1.webp" alt="Classic" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Classic</p>
-                    <p class="text-sm text-gray-500">Rp 23.000</p>
-                </div>
-                <!-- <input type="number" name="classic" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('classic', -1)">−</button>
-                        <input type="text" name="classic" id="classic" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('classic', 1)">+</button>
+                <!-- Varian 2 -->
+                <div class="flex items-center gap-4">
+                    <img src="images/product/3.webp" alt="Double Choco" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Double Choco</p>
+                        <p class="text-sm text-gray-500">Rp 22.500</p>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalClassic" value="0"></p>
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <img src="images/product/2.webp" alt="Original" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">OG with Marshmallow</p>
-                    <p class="text-sm text-gray-500">Rp 21.500</p>
-                </div>
-                <!-- <input type="number" name="original" min="0" class="w-16 border rounded p-1 qty-input"
+                    <!-- <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input"
                     placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('original', -1)">−</button>
-                        <input type="text" name="original" id="original" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('original', 1)">+</button>
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('doubleChoco', -1)">−</button>
+                            <input type="text" name="doubleChoco" id="doubleChoco" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('doubleChoco', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalDoubleChoco" value="0"></p>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalOriginal" value="0"></p>
                 </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <img src="images/product/7.webp" alt="Biscoff" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Biscoff</p>
-                    <p class="text-sm text-gray-500">Rp 20.500</p>
-                </div>
-                <!-- <input type="number" name="biscoff" min="0" class="w-16 border rounded p-1 qty-input" placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('biscoff', -1)">−</button>
-                        <input type="text" name="biscoff" id="biscoff" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('biscoff', 1)">+</button>
+                <div class="flex items-center gap-4">
+                    <img src="images/product/4.webp" alt="Black Caramel" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Black Caramel</p>
+                        <p class="text-sm text-gray-500">Rp 25.000</p>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalBiscoff" value="0"></p>
+                    <!-- <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('blackCaramel', -1)">−</button>
+                            <input type="text" name="blackCaramel" id="blackCaramel" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('blackCaramel', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalBlackCaramel" value="0"></p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Varian 2 -->
-            <div class="flex items-center gap-4">
-                <img src="images/product/3.webp" alt="Double Choco" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Double Choco</p>
-                    <p class="text-sm text-gray-500">Rp 22.500</p>
-                </div>
-                <!-- <input type="number" name="doubleChoco" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('doubleChoco', -1)">−</button>
-                        <input type="text" name="doubleChoco" id="doubleChoco" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('doubleChoco', 1)">+</button>
+                <div class="flex items-center gap-4">
+                    <img src="images/product/5.webp" alt="Matcha" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Matcha</p>
+                        <p class="text-sm text-gray-500">Rp 23.500</p>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalDoubleChoco" value="0"></p>
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <img src="images/product/4.webp" alt="Black Caramel" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Black Caramel</p>
-                    <p class="text-sm text-gray-500">Rp 25.000</p>
-                </div>
-                <!-- <input type="number" name="blackCaramel" min="0" class="w-16 border rounded p-1 qty-input"
+                    <!-- <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input"
                     placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('blackCaramel', -1)">−</button>
-                        <input type="text" name="blackCaramel" id="blackCaramel" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('blackCaramel', 1)">+</button>
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('matchaWhiteChoco', -1)">−</button>
+                            <input type="text" name="matchaWhiteChoco" id="matchaWhiteChoco" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('matchaWhiteChoco', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalMatchaWhiteChoco" value="0"></p>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalBlackCaramel" value="0"></p>
                 </div>
-            </div>
+                <div class="flex items-center gap-4">
+                    <img src="images/product/6.webp" alt="Red Velvet" class="w-16 h-16 object-cover rounded" />
+                    <div class="flex-1">
+                        <p class="font-medium">Red Velvet</p>
+                        <p class="text-sm text-gray-500">Rp 18.500</p>
+                    </div>
+                    <!-- <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input"
+                    placeholder="0" /> -->
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('redVelvet', -1)">−</button>
+                            <input type="text" name="redVelvet" id="redVelvet" value="0" readonly
+                                class="w-10 text-center border rounded" />
+                            <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
+                                onclick="updateQty('redVelvet', 1)">+</button>
+                        </div>
+                        <p class="text-sm text-gray-500" id="totalRedVelvet" value="0"></p>
+                    </div>
+                </div>
+                <!-- <div class="flex items-center gap-4">
+                    <strong>Total</strong>
+                    <div class="flex-1">
 
-            <div class="flex items-center gap-4">
-                <img src="images/product/5.webp" alt="Matcha" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Matcha</p>
-                    <p class="text-sm text-gray-500">Rp 23.500</p>
-                </div>
-                <!-- <input type="number" name="matchaWhiteChoco" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('matchaWhiteChoco', -1)">−</button>
-                        <input type="text" name="matchaWhiteChoco" id="matchaWhiteChoco" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('matchaWhiteChoco', 1)">+</button>
                     </div>
-                    <p class="text-sm text-gray-500" id="totalMatchaWhiteChoco" value="0"></p>
-                </div>
-            </div>
-            <div class="flex items-center gap-4">
-                <img src="images/product/6.webp" alt="Red Velvet" class="w-16 h-16 object-cover rounded" />
-                <div class="flex-1">
-                    <p class="font-medium">Red Velvet</p>
-                    <p class="text-sm text-gray-500">Rp 18.500</p>
-                </div>
-                <!-- <input type="number" name="redVelvet" min="0" class="w-16 border rounded p-1 qty-input"
-                    placeholder="0" /> -->
-                <div class="flex-2">
-                    <div class="flex items-center gap-1">
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('redVelvet', -1)">−</button>
-                        <input type="text" name="redVelvet" id="redVelvet" value="0" readonly
-                            class="w-10 text-center border rounded" />
-                        <button type="button" class="qty-btn bg-orange-400 text-white px-2 rounded"
-                            onclick="updateQty('redVelvet', 1)">+</button>
-                    </div>
-                    <p class="text-sm text-gray-500" id="totalRedVelvet" value="0"></p>
-                </div>
-            </div>
+                    <div class="flex-2">
+                        <div class="flex items-center gap-1">
 
-            <!-- <div class="flex items-center gap-4">
+                        </div>
+                        <p class="text-sm text-black-500" id="totalAll" value="0"></p>
+                    </div>
+                </div> -->
+
+
+                <!-- <div class="flex items-center gap-4">
                 <img src="images/product/03.webp" alt="Matcha" class="w-16 h-16 object-cover rounded" />
                 <div class="flex-1">
                     <p class="font-medium">Monster Cookie</p>
@@ -179,39 +192,46 @@
                 </div>
                 <input type="number" name="monsterCookie" min="0" class="w-16 border rounded p-1" placeholder="0" />
             </div> -->
-            <!-- Info Pembeli -->
-            <hr class="my-4">
-            <div>
-                <label class="block mb-1">Nama</label>
-                <input type="text" name="nama" required class="w-full border rounded p-2 qty-input" />
+                <!-- Info Pembeli -->
+                <button type="button" onclick="showStep2()"
+                    class="w-full bg-orange-500 text-white p-2 rounded hover:bg-orange-600">Lanjut</button>
             </div>
-            <div>
-                <label class="block mb-1">Alamat</label>
-                <textarea name="alamat" required class="w-full border rounded p-2 qty-input" rows="2"></textarea>
-            </div>
-            <div>
-                <label class="block mb-1">Pesan</label>
-                <input type="text" name="pesan" class="w-full border rounded p-2 qty-input" />
-            </div>
-            <div>
-                <label class="block mb-1">Jasa Pengiriman</label>
-                <select name="jasa" class="w-full border rounded p-2 qty-input">
-                    <option value="Gosend">Gosend</option>
-                    <option value="Kurir Lokal">Kurir Lokal</option>
-                    <option value="-">-</option>
-                </select>
-            </div>
-            <div>
-                <label class="block mb-1">Metode Pembayaran</label>
-                <select name="pembayaran" class="w-full border rounded p-2 qty-input">
-                    <option value="Transfer">Transfer</option>
-                    <option value="Cash">Cash</option>
-                </select>
-            </div>
+            <div id="step2" class="hidden">
+                <hr class="my-4">
+                <div>
+                    <label class="block mb-1">Nama</label>
+                    <input type="text" name="nama" required class="w-full border rounded p-2 qty-input" />
+                </div>
+                <div>
+                    <label class="block mb-1">Alamat</label>
+                    <textarea name="alamat" required class="w-full border rounded p-2 qty-input" rows="2"></textarea>
+                </div>
+                <div>
+                    <label class="block mb-1">Pesan</label>
+                    <input type="text" name="pesan" class="w-full border rounded p-2 qty-input" />
+                </div>
+                <div>
+                    <label class="block mb-1">Jasa Pengiriman</label>
+                    <select name="jasa" class="w-full border rounded p-2 qty-input">
+                        <option value="Gosend">Gosend</option>
+                        <option value="Kurir Lokal">Kurir Lokal</option>
+                        <option value="-">-</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-1">Metode Pembayaran</label>
+                    <select name="pembayaran" class="w-full border rounded p-2 qty-input">
+                        <option value="Transfer">Transfer</option>
+                        <option value="Cash">Cash</option>
+                    </select>
+                </div>
 
-            <button type="submit" class="w-full mt-4 bg-green-500 text-white p-2 rounded hover:bg-green-600">
-                Kirim via WhatsApp
-            </button>
+                <button type="submit" class="w-full mt-4 bg-green-500 text-white p-2 rounded hover:bg-green-600">
+                    Kirim via WhatsApp
+                </button>
+                <button type="button" onclick="hideStep2()"
+                    class="w-full mt-2 bg-gray-300 text-gray-800 p-2 rounded hover:bg-gray-400">Kembali</button>
+            </div>
         </form>
     </div>
 
@@ -224,6 +244,17 @@
 
 </html>
 <script>
+
+    let totalAll = 0;
+    function showStep2() {
+        document.getElementById('step1').classList.add('hidden');
+        document.getElementById('step2').classList.remove('hidden');
+    }
+
+    function hideStep2() {
+        document.getElementById('step1').classList.remove('hidden');
+        document.getElementById('step2').classList.add('hidden');
+    }
     function updateQty(id, delta) {
         const input = document.getElementById(id);
         let value = parseInt(input.value) || 0;
@@ -241,7 +272,17 @@
             // monsterCookie: 11000
         };
         const totalHarga = value * hargaPerPcs[id];
+        totalAll += totalHarga;
         const totalElement = document.getElementById(`total${id.charAt(0).toUpperCase() + id.slice(1)}`);
+        /*const totalAllElement = document.getElementById('totalAll');
+        if (totalAllElement) {
+            totalAllElement.textContent = `Total: Rp ${totalAll.toLocaleString("id-ID")}`;
+        } else {
+            const newTotalAllElement = document.createElement('p');
+            newTotalAllElement.id = 'totalAll';
+            newTotalAllElement.textContent = `Total: Rp ${totalAll.toLocaleString("id-ID")}`;
+            input.parentNode.appendChild(newTotalAllElement);
+        }*/
         if (totalElement) {
             totalElement.textContent = `Total: Rp ${totalHarga.toLocaleString("id-ID")}`;
         }
